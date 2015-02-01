@@ -1,0 +1,41 @@
+#!/bin/sh
+lock() {
+
+  spotify_pid=$(pgrep spotify)
+    if [ "$spotify_pid" != "" ]; then
+    dbus-send --type=method_call --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Pause
+fi
+
+  pandora_pid=$(pgrep pithos)
+    if [ "$pandora_pid" != "" ]; then
+    dbus-send --type=method_call --dest=net.kevinmehall.Pithos /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Pause
+fi
+
+i3lock -i ~/.config/desktop/lock_wallpaper --ignore-empty-password
+}
+
+case "$1" in
+  lock)
+    lock
+    ;;
+  logout)
+    i3-msg exit
+    ;;
+  suspend)
+    lock && systemctl suspend
+    ;;
+  hibernate)
+    lock && systemctl hibernate
+    ;;
+  reboot)
+    systemctl reboot
+    ;;
+  shutdown)
+    systemctl poweroff
+    ;;
+  *)
+    echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
+    exit 2
+esac
+
+exit 0
