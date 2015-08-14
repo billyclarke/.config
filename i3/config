@@ -180,7 +180,8 @@ bindsym $mod+Shift+b move container to workspace back_and2_forth; workspace back
 # Lock screen with $mod Alt L
 bindsym $mod+Mod1+l exec ~/.config/i3/i3exit lock
 
-
+bindsym $mod+Control+1 move workspace to output left
+bindsym $mod+Control+2 move workspace to output right
 
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
