@@ -14,13 +14,10 @@ general {
 
 order += "volume master"
 order += "disk /"
-order += "disk /home"
 order += "run_watch DHCP"
 order += "run_watch VPN"
-order += "wireless wlp3s0"
-order += "ethernet enp4s0f2"
+order += "ethernet enp3s0"
 order += "ipv6"
-order += "battery 0"
 order += "load"
 order += "tztime local"
 
@@ -29,7 +26,7 @@ wireless wlp3s0 {
         format_down = "W: down"
 }
 
-ethernet enp4s0f2 {
+ethernet enp3s0 {
         # if you use %speed, i3status requires root privileges
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
@@ -41,7 +38,7 @@ battery 0 {
 }
 
 run_watch DHCP {
-        pidfile = "/var/run/dhcp*.pid"
+        pidfile = "/var/run/dhc*.pid"
 }
 
 run_watch VPN {
