@@ -1,3 +1,4 @@
 #! /bin/bash
 
-ln .vimrc ~/.vimrc
+# Symlink ~/.vimrc to .config/vim/vimrc
+ln ./vim/vimrc ~/.vimrc
