@@ -1,0 +1,4 @@
+#! /bin/bash
+export XDG_CONFIG_HOME=~/.config
+export VISUAL=vim
+export EDITOR="$VISUAL"
