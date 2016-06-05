@@ -1,0 +1,5 @@
+[user]
+	email = william@clrk.io
+	name = William Clarke
+[alias]
+	all = "!f() { ls -R --directory --color=never */.git */*/.git | sed 's/\\/.git//' | xargs -P10 -I{} git -C {} $1; }; f"
