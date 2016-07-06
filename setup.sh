@@ -40,6 +40,10 @@ source ~/.config/setup/setup-programs.sh
 echo -e '\n\n\nConfiguring Launcher\n\n\n'
 source ~/.config/setup/setup-launcher.sh
 
+# Change .config git repo to use ssh
+echo -e '\n\n\nChanging .config git repo to use SSH instead of HTTP\n\n\n'
+git -C ~/.config remote remove origin
+git -C ~/.config remote add origin git@github.com:william-clarke/.config.git
 
 # Manual steps
 echo -e '\n\n\nTODO:'
