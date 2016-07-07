@@ -48,7 +48,9 @@ git -C ~/.config remote add origin git@github.com:william-clarke/.config.git
 # Manual steps
 echo -e '\n\n\nTODO:'
 echo -e '\nEnable Workspaces in System Settings'
+echo -e '\nSet Redshift to run on startup by searching for "Startup Applications" and adding the "redshift" command'
 echo -e '\nAdd SSH key to GitHub and BitBucket:'
 cat ~/.ssh/id_rsa.pub
 echo -e '\nLog in to Google Chrome'
+
 
