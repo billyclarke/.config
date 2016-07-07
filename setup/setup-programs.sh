@@ -9,7 +9,7 @@ echo 'Running apt-get update'
 sudo apt-get update
 
 echo 'Installing specified packages'
-sudo apt-get install \
+sudo apt-get -y install \
        git \
        google-chrome-stable \
        htop \
