@@ -12,3 +12,4 @@ python3 ~/.config/setup/setup-launcher-util.py unity-control-center.desktop r
 
 python3 ~/.config/setup/setup-launcher-util.py google-chrome.desktop a
 python3 ~/.config/setup/setup-launcher-util.py gnome-terminal.desktop a
+python3 ~/.config/setup/setup-launcher-util.py spotify.desktop a
